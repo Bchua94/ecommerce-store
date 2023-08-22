@@ -58,6 +58,10 @@ Start the backend server before the frontend client using mvn spring-boot:run.
   5. The frontend client is running on [localhost:4200]().
   
 Note: The backend API url is configured in `src/environments/environment.ts` of the frontend project. It is `localhost:8080/api` by default.
+
+Admin Credentials
+email : admin@email.com
+password : 123
   
 #### Run in Docker
 You can build the image and run the container with Docker. 
