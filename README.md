@@ -4,7 +4,7 @@
 This is a Single Page Appliaction with client-side rendering. It includes frontend and backend directory.
 The frontend client makes API calls to the backend server when it is running.
 
-#### Live Demo: [https://animated-purpose-production.up.railway.app](https://animated-purpose-production.up.railway.app) Deployed on Railway platform
+#### Live Demo: [https://ecommerce-store-production.up.railway.app/](https://ecommerce-store-production.up.railway.app/) Deployed on Railway platform
 
 
 ## Features
