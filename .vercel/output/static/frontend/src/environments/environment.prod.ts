@@ -1,4 +1,4 @@
 export const environment = {
   production: true
 };
-export const apiUrl = 'https://animated-purpose-production.up.railway.app';
+export const apiUrl = 'https://ecommerce-store-production.up.railway.app';
