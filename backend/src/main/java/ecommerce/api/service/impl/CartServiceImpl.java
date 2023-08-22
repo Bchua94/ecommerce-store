@@ -135,8 +135,8 @@ public class CartServiceImpl implements CartService {
                 cartItem.setCart(null);
                 cartItem.setCustomerOrder(order1);
                 productService.decreaseStock(cartItem.getProductId(), cartItem.getCount());
-                cartItemRepository.save(cartItem);
             });
+            cartRepository.save(cart.get());
 
         }
     }
