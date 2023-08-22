@@ -40,6 +40,7 @@ public class CartItem {
     @NotNull
     private String productDescription;
 
+    @Lob
     private String productIcon;
 
     @ManyToOne
