@@ -28,11 +28,11 @@ public class ProductInOrderServiceImpl implements ProductInOrderService {
     public void update(String itemId, Integer quantity, User user) {
         Optional<Cart> cart= cartRepository.findByUser(user);
         if(cart.isPresent()) {
-            var op = cart.get().getCartItems().stream().filter(e -> itemId.equals(e.getProductId())).findFirst();
-            op.ifPresent(productInOrder -> {
-                productInOrder.setCount(quantity);
-                cartItemRepository.save(productInOrder);
-            });
+            var op = cart.get().getCartItems().stream().filter(e -> Long.valueOf(itemId).equals(e.getProductId())).findFirst();
+            if(op.isPresent()) {
+                op.get().setCount(quantity);
+                cartItemRepository.save(op.get());
+            }
         }
     }
 

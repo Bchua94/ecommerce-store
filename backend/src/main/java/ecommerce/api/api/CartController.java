@@ -66,8 +66,8 @@ public class CartController {
         return true;
     }
 
-    @PutMapping("/{itemId}")
-    public CartItem modifyItem(@PathVariable("itemId") String itemId, @RequestBody Integer quantity, Principal principal) {
+    @PutMapping("/{itemId}/{quantity}")
+    public CartItem modifyItem(@PathVariable("itemId") String itemId, @PathVariable("quantity") Integer quantity, Principal principal) {
         User user = userService.findOne(principal.getName());
          productInOrderService.update(itemId, quantity, user);
         return productInOrderService.findOne(itemId, user);
